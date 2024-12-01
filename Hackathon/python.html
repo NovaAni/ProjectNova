@@ -49,6 +49,11 @@
 
         let currentQuestion = 0;
         let score = 0;
+        function saveScore(){
+            sessionStorage.setItem("score",score);
+            window.location.href = 'score.html';
+        }
+        
 
         function displayQuestion() {
             const questionElement = document.getElementById('question');
@@ -76,10 +81,22 @@
                 displayQuestion();
             } else {
                 alert(`Quiz Over! Your final score is: ${score}/10`);
+                
             }
+
         }
 
         displayQuestion();
     </script>
+    <button onclick="saveScore()" id="butt">Show Score</button>
+    <style>
+        #butt{
+            color: rgb(0,255,0);
+            border-color: #00FF00;
+            text-align: center;
+            display: grid;
+            background-color: black;
+        }
+    </style>
 </body>
 </html>

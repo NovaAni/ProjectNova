@@ -46,6 +46,10 @@
 
         let currentQuestion = 0;
         let score = 0;
+        function saveScore(){
+            sessionStorage.setItem("score",score);
+            window.location.href = 'score.html';
+        }
 
         function displayQuestion() {
             const questionElement = document.getElementById('question');
@@ -76,5 +80,15 @@
 
         displayQuestion();
     </script>
+    <button onclick="saveScore()" id="but">Show Score</button>
+    <style>
+        #but{
+            color: rgb(0,255,0);
+            border-color: #00FF00;
+            text-align: center;
+            display: grid;
+            background-color: black;
+        }
+    </style>
 </body>
 </html>
