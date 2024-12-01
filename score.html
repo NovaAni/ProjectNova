@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Score</title>
+    <script>
+        window.onload = function() {
+            // Retrieve the score from sessionStorage
+            let score = sessionStorage.getItem("score");
+
+            // Display the score if it exists
+            if (score) {
+                document.getElementById("scoreDisplay").textContent = `Your Score: ${score}`;
+            } else {
+                document.getElementById("scoreDisplay").textContent = "No score found!";
+            }
+        };
+    </script>
+</head>
+<body bgcolor="black" text="#00FF00">
+    <link rel="stylesheet">
+    
+    <h1><center>Live Score</center></h1>
+    <h2><center><p id="scoreDisplay"></p></center></h2>
+</body>
+</html>
